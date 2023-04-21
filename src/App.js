@@ -3,13 +3,13 @@ import { Route, Routes } from "react-router-dom";
 
 import HeadBar from "./containers/HeadBar/HeadBar";
 import Navbar from "./containers/NavBar/NavBar";
-
-import HomePage from "./containers/HomePage/HomePage";
-import TShirtsPage from "./containers/TShirtsPage/TShirtsPage";
-import CartPage from "./containers/CartPage/CartPage";
-import NotFound from "./containers/NotFound/NotFound";
 import Footer from "./containers/Footer/Footer";
-import ProductPage from "./containers/ProductPage/ProductPage";
+
+import HomePage from "./Pages/HomePage/HomePage";
+import TShirtsPage from "./Pages/TShirtsPage/TShirtsPage";
+import CartPage from "./Pages/CartPage/CartPage";
+import NotFound from "./Pages/NotFound/NotFound";
+import ProductPage from "./Pages/ProductPage/ProductPage";
 
 function App() {
 	return (

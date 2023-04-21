@@ -7,7 +7,7 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import "bootstrap/dist/css/bootstrap.min.css";
 
-import { ProductProvider } from "./containers/ProductPage/ProductPage";
+import { ProductProvider } from "./Pages/ProductPage/ProductPage";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
