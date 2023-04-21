@@ -1,25 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { Route, Routes } from "react-router-dom";
+
+import HeadBar from "./containers/HeadBar/HeadBar";
+import Navbar from "./containers/NavBar/NavBar";
+
+import HomePage from "./containers/HomePage/HomePage";
+import TShirtsPage from "./containers/TShirtsPage/TShirtsPage";
+import CartPage from "./containers/CartPage/CartPage";
+import NotFound from "./containers/NotFound/NotFound";
+import Footer from "./containers/Footer/Footer";
+import ProductPage from "./containers/ProductPage/ProductPage";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	return (
+		<div>
+			<HeadBar />
+			<Navbar />
+
+			<Routes>
+				<Route path="/" element={<HomePage />} />
+				<Route path="/t-shirts" element={<TShirtsPage />} />
+				<Route path="/cart" element={<CartPage />} />
+				<Route path="/not-found" element={<NotFound />} />
+				<Route path="/product/:name" element={<ProductPage />} />
+			</Routes>
+
+			<Footer />
+		</div>
+	);
 }
 
 export default App;

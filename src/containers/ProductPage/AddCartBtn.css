@@ -1,0 +1,12 @@
+.AddCartBtn .btn-secondary {
+	padding: 15px;
+	background-color: #ac2432;
+	color: rgb(179, 179, 179);
+	border: solid 1px #ac2432;
+	font-size: larger;
+}
+.AddCartBtn .btn-secondary:hover {
+	background-color: #ac2432;
+	color: white;
+	border: solid 1px #ac2432;
+}
