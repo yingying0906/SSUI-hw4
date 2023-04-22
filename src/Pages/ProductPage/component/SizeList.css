@@ -1,14 +1,14 @@
-.customDrop {
+.customSizeDrop {
 	display: flex;
 	flex-direction: row;
 	justify-content: flex-start;
 	align-items: center;
 }
-.customDrop > div {
+.customSizeDrop > div {
 	margin: 0;
 }
 
-.customDrop .btn-secondary {
+.customSizeDrop .btn-secondary {
 	margin: 0;
 	margin-left: 5px;
 	background-color: white;
@@ -16,7 +16,7 @@
 	border: #ac2432 solid 1px;
 }
 
-.customDrop .btn-secondary:hover {
+.customSizeDrop .btn-secondary:hover {
 	background-color: white;
 	color: black;
 	border: #ac2432 solid 1px;

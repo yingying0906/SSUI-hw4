@@ -17,8 +17,10 @@ const tShirtsPage = () => {
 		<div className="TPage">
 			<h2>Our T-Shirts</h2>
 			<div className="Tflex">
-				{shirtArr.map((shirt) => (
+				{shirtArr.map((shirt, index) => (
 					<BuildCard
+						key={index}
+						id={index}
 						name={shirt.name}
 						desc={shirt.description}
 						price={shirt.price}

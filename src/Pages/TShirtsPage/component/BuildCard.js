@@ -10,17 +10,15 @@ import {
 } from "reactstrap";
 import { Link } from "react-router-dom";
 import "./BuildCard.css";
+import { ProductContext } from "../../ProductPage/productContext/productContext";
+import { useContext, useEffect } from "react";
+import shirtArr from "../../../shared/shirts";
 
 const BuildCard = (props) => {
 	return (
 		<Card className="card">
-			<Link to={`/product/${props.name}`}>
-				<CardImg
-					top
-					width="100%"
-					src={props.colors}
-					alt="Card image cap"
-				/>
+			<Link to={`/product/${props.name}/${props.id}`}>
+				<CardImg top width="100%" src={props.colors} alt="" />
 			</Link>
 
 			<CardBody>
@@ -29,7 +27,7 @@ const BuildCard = (props) => {
 					Available in {props.colorNum} colors
 				</CardSubtitle>
 				<div style={{ display: "flex", justifyContent: "center" }}>
-					<Link to={`/product/${props.name}`}>
+					<Link to={`/product/${props.name}/${props.id}`}>
 						<Button>See Page</Button>
 					</Link>
 				</div>

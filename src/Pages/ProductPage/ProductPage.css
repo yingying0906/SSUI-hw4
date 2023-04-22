@@ -2,7 +2,7 @@
 	padding: 80px;
 }
 
-.detailContainer {
+.ProductPage-Container {
 	display: flex;
 	flex-direction: row;
 	justify-content: flex-start;
@@ -10,11 +10,11 @@
 	padding: 10px;
 }
 
-.rightDiv {
+.ProductPage-rightDiv {
 	color: #ac2432;
 	margin-left: 40px;
 }
-.rightDiv > * {
+.ProductPage-rightDiv > * {
 	margin: 0;
 	margin-bottom: 20px;
 }

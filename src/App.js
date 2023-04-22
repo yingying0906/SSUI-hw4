@@ -22,7 +22,7 @@ function App() {
 				<Route path="/t-shirts" element={<TShirtsPage />} />
 				<Route path="/cart" element={<CartPage />} />
 				<Route path="/not-found" element={<NotFound />} />
-				<Route path="/product/:name" element={<ProductPage />} />
+				<Route path="/product/:name/:id" element={<ProductPage />} />
 			</Routes>
 
 			<Footer />

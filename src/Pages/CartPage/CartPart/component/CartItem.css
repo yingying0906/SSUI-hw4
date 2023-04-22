@@ -1,0 +1,41 @@
+.CartItem-Container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+
+	border-top: 2px solid #ac2432;
+	margin-bottom: 20px;
+}
+
+.CartItem-Container > h2 {
+	margin: 20px 0px 20px 0px;
+	font-weight: lighter;
+}
+
+.Cart-RightDiv {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: center;
+}
+.Cart-RightDiv * {
+	font-weight: lighter;
+}
+
+.Cart-RightDiv > img {
+	min-width: 40%;
+	max-width: 40%;
+}
+
+.Cart-RightDiv > div {
+	margin-left: 40px;
+}
+
+.Cart-RightDiv > div > div {
+	margin-bottom: 10px;
+}
+
+.Cart-RightDiv > div > div > span:nth-child(2) {
+	color: #ac2432;
+}

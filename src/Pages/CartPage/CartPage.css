@@ -1,0 +1,16 @@
+.Cart-Page {
+	margin-left: 4%;
+	margin-right: 4%;
+	margin-top: 2%;
+}
+
+.Cart-title {
+	margin-bottom: 25px;
+}
+
+.Cart-Content {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: flex-start;
+}

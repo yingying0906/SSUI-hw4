@@ -7,14 +7,17 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import "bootstrap/dist/css/bootstrap.min.css";
 
-import { ProductProvider } from "./Pages/ProductPage/ProductPage";
+import { ProductProvider } from "./Pages/ProductPage/productContext/productContext";
+import { CartProvider } from "./Pages/CartPage/CartContext/CartContext";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
 	<React.StrictMode>
 		<BrowserRouter>
 			<ProductProvider>
-				<App />
+				<CartProvider>
+					<App />
+				</CartProvider>
 			</ProductProvider>
 		</BrowserRouter>
 	</React.StrictMode>

@@ -7,7 +7,7 @@ import {
 } from "reactstrap";
 import "./SizeList.css";
 import { useContext } from "react";
-import { ProductContext } from "../ProductPage";
+import { ProductContext } from "../productContext/productContext";
 
 const allSize = [
 	"Women's XS",
@@ -57,7 +57,7 @@ const SizeList = () => {
 	};
 
 	return (
-		<div className="customDrop">
+		<div className="customSizeDrop">
 			Size:
 			<Dropdown
 				direction="up"

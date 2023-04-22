@@ -8,7 +8,7 @@ import {
 import "./QuantityList.css";
 
 import { useContext } from "react";
-import { ProductContext } from "../ProductPage";
+import { ProductContext } from "../productContext/productContext";
 
 const DropMenu = ({ handleQuanItem }) => {
 	const num = [];
@@ -39,11 +39,11 @@ const QuantityList = () => {
 		}));
 	};
 	const handleQuanItem = (num) => {
-		setProductState({ ...productState, selQty: num });
+		setProductState({ ...productState, selQty: parseInt(num) });
 	};
 
 	return (
-		<div className="customDrop">
+		<div className="customQuanDrop">
 			Quantity:
 			<Dropdown
 				direction="up"
