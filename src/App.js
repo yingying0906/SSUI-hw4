@@ -5,11 +5,11 @@ import HeadBar from "./containers/HeadBar/HeadBar";
 import Navbar from "./containers/NavBar/NavBar";
 import Footer from "./containers/Footer/Footer";
 
-import HomePage from "./Pages/HomePage/HomePage";
-import TShirtsPage from "./Pages/TShirtsPage/TShirtsPage";
-import CartPage from "./Pages/CartPage/CartPage";
-import NotFound from "./Pages/NotFound/NotFound";
-import ProductPage from "./Pages/ProductPage/ProductPage";
+import HomePage from "./pages/HomePage/HomePage";
+import TShirtsPage from "./pages/TShirtsPage/TShirtsPage";
+import CartPage from "./pages/CartPage/CartPage";
+import NotFound from "./pages/NotFound/NotFound";
+import ProductPage from "./pages/ProductPage/ProductPage";
 
 function App() {
 	return (

@@ -6,7 +6,7 @@ export const ProductProvider = ({ children }) => {
 	const [productState, setProductState] = useState({
 		side: null,
 		color: null,
-		openQuan: false,
+		openQty: false,
 		selQty: null,
 		openSize: false,
 		selSize: null,

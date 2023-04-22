@@ -3,7 +3,7 @@ import { Button } from "reactstrap";
 import "./SideBtn.css";
 
 import { useContext } from "react";
-import { ProductContext } from "../../../Context/productContext";
+import { ProductContext } from "../../../context/productContext";
 
 const SideBtn = () => {
 	const { productState, setProductState } = useContext(ProductContext);
@@ -12,18 +12,18 @@ const SideBtn = () => {
 	};
 
 	return (
-		<div>
+		<div className="redButton">
 			Side:
 			<Button
 				id="front"
-				className="sideBtn"
+				style={{ margin: "3px 5px" }}
 				onClick={(e) => handleSideBtn(e.target.id)}
 			>
 				Front
 			</Button>
 			<Button
 				id="back"
-				className="sideBtn"
+				style={{ margin: "3px 5px" }}
 				onClick={(e) => handleSideBtn(e.target.id)}
 			>
 				Back

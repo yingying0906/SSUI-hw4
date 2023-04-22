@@ -1,7 +1,10 @@
-import "./CartItem.css";
+import { Link } from "react-router-dom";
+
 import QuantityDrop from "./QuantityDrop";
 import shirtArr from "../../../../shared/shirts";
 import RemoveItemBtn from "./RemoveItemBtn";
+
+import "./CartItem.css";
 
 const CartItem = (props) => {
 	const { name, color, size, quantity, price, id } = props.data;
@@ -12,7 +15,10 @@ const CartItem = (props) => {
 		<div className="CartItem-Container">
 			<h2>{name}</h2>
 			<div className="Cart-RightDiv">
-				<img src={imgSrc} alt="" />
+				<Link to={`/product/${shirtArr[id].name}/${id}`}>
+					<img src={imgSrc} alt="" />
+				</Link>
+
 				<div>
 					<div>
 						<span>Quantity: </span>

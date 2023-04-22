@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { Button } from "reactstrap";
-import { ProductContext } from "../../../Context/productContext";
-import { cartContext } from "../../../Context/cartContext";
+import { ProductContext } from "../../../context/productContext";
+import { cartContext } from "../../../context/cartContext";
 import "./AddCartBtn.css";
 
 const AddCartBtn = () => {
@@ -9,7 +9,7 @@ const AddCartBtn = () => {
 	const { addToCart } = useContext(cartContext);
 
 	return (
-		<div className="AddCartBtn">
+		<div className="redButton">
 			<Button
 				disabled={!productState.canAddCart}
 				onClick={(e) => {

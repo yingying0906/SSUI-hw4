@@ -7,8 +7,8 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import "bootstrap/dist/css/bootstrap.min.css";
 
-import { ProductProvider } from "./Context/productContext";
-import { CartProvider } from "./Context/cartContext";
+import { ProductProvider } from "./context/productContext";
+import { CartProvider } from "./context/cartContext";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(

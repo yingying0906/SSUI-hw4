@@ -15,3 +15,19 @@ code {
 * {
 	font-family: "Open Sans";
 }
+
+.redButton .btn-secondary:disabled {
+	filter: grayscale(100%);
+}
+.redButton .btn-secondary {
+	padding: 8px 10px;
+	background-color: #ac2432 !important;
+	border: solid 1px #ac2432 !important;
+	color: rgb(182, 182, 182) !important;
+}
+
+.redButton .btn-secondary:hover {
+	background-color: #ac2432 !important;
+	border: solid 1px #ac2432 !important;
+	color: white !important;
+}

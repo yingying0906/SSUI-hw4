@@ -7,7 +7,7 @@ import {
 } from "reactstrap";
 import "./SizeList.css";
 import { useContext } from "react";
-import { ProductContext } from "../../../Context/productContext";
+import { ProductContext } from "../../../context/productContext";
 
 const allSize = [
 	"Women's XS",

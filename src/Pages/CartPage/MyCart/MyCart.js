@@ -1,15 +1,15 @@
 import { useContext } from "react";
-import { cartContext } from "../../../Context/cartContext";
+import { cartContext } from "../../../context/cartContext";
 import "./MyCart.css";
 
 import CartItem from "./component/CartItem";
 
 const CartRender = (prop) => {
 	const { cartState } = useContext(cartContext);
-	const CartArr = cartState.map((item, index) => {
-		return <CartItem data={item} idx={index} />;
+	const CartArr = cartState.slice(0).map((item, index) => {
+		return <CartItem key={index} data={item} idx={index} />;
 	});
-	return CartArr;
+	return CartArr.reverse();
 };
 
 const MyCart = () => {

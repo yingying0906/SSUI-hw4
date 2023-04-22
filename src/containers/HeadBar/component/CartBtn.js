@@ -1,8 +1,9 @@
-import "./CartBtn.css";
 import { Link } from "react-router-dom";
-import CartLogo from "../../../assets/images/cart.png";
 import { useContext } from "react";
-import { cartContext } from "../../../Context/cartContext";
+import { cartContext } from "../../../context/cartContext";
+
+import CartLogo from "../../../assets/images/cart.png";
+import "./CartBtn.css";
 const CartBtn = () => {
 	const { totalQuantity } = useContext(cartContext);
 	return (

@@ -8,7 +8,7 @@ import {
 import "./QuantityList.css";
 
 import { useContext } from "react";
-import { ProductContext } from "../../../Context/productContext";
+import { ProductContext } from "../../../context/productContext";
 const DropMenu = ({ handleQuanItem }) => {
 	const num = [];
 	for (let i = 1; i <= 20; i++) {
@@ -34,7 +34,7 @@ const QuantityList = () => {
 	const toggleQuan = () => {
 		setProductState((prevState) => ({
 			...prevState,
-			openQuan: !prevState.openQuan,
+			openQty: !prevState.openQty,
 		}));
 	};
 	const handleQuanItem = (num) => {
@@ -46,7 +46,7 @@ const QuantityList = () => {
 			Quantity:
 			<Dropdown
 				direction="up"
-				isOpen={productState.openQuan}
+				isOpen={productState.openQty}
 				toggle={toggleQuan}
 			>
 				<DropdownToggle caret>{productState.selQty}</DropdownToggle>

@@ -1,5 +1,7 @@
 import { useContext } from "react";
-import { cartContext } from "../../../Context/cartContext";
+import { cartContext } from "../../../context/cartContext";
+import { Button } from "reactstrap";
+import { Link } from "react-router-dom";
 import "./OrderSummary.css";
 
 const OrderSummary = () => {
@@ -24,10 +26,17 @@ const OrderSummary = () => {
 	};
 
 	const Total = (props) => {
-		var shipping = props.total ? 6.95 : 0;
+		var shipping = props.state.length ? 6.95 : 0;
 		return (
 			<div className="orderSumSeperate">
-				<h6>Subtotal</h6>
+				<h6
+					style={{
+						fontSize: "1.3em",
+						borderTop: "solid 2px transparent",
+					}}
+				>
+					Total:{" "}
+				</h6>
 
 				<h6
 					style={{
@@ -41,14 +50,52 @@ const OrderSummary = () => {
 		);
 	};
 
-	return (
-		<div className="Order-Container">
-			<h4>Order Summary</h4>
-			<div>
-				<SubTotal total={totalPrice} />
-				<EstShipping state={cartState} />
-				<Total total={totalPrice} />
+	const SignNcheck = () => {
+		return (
+			<div
+				style={{
+					display: "flex",
+					flexDirection: "row",
+					justifyContent: "center",
+				}}
+				className="redButton"
+			>
+				<Link to="/not-found">
+					<Button>Sign in and Checkout</Button>
+				</Link>
 			</div>
+		);
+	};
+
+	const ContinueShop = () => {
+		return (
+			<div
+				style={{
+					display: "flex",
+					flexDirection: "row",
+					justifyContent: "center",
+				}}
+				className="redButton"
+			>
+				<Link to="/t-shirts">
+					<Button>Continue Shopping</Button>
+				</Link>
+			</div>
+		);
+	};
+
+	return (
+		<div>
+			<div className="Order-Container">
+				<h4>Order Summary</h4>
+				<div>
+					<SubTotal total={totalPrice} />
+					<EstShipping state={cartState} />
+					<Total state={cartState} total={totalPrice} />
+					<SignNcheck />
+				</div>
+			</div>
+			<ContinueShop />
 		</div>
 	);
 };

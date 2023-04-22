@@ -23,9 +23,14 @@
 	font-weight: lighter;
 }
 
-.Cart-RightDiv > img {
+.Cart-RightDiv > a {
 	min-width: 40%;
 	max-width: 40%;
+}
+
+.Cart-RightDiv > a > img {
+	min-width: 100%;
+	max-width: 100%;
 }
 
 .Cart-RightDiv > div {

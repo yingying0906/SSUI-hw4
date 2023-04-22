@@ -6,7 +6,7 @@ import {
 	DropdownItem,
 } from "reactstrap";
 import "./QuantityDrop.css";
-import { cartContext } from "../../../../Context/cartContext";
+import { cartContext } from "../../../../context/cartContext";
 
 const QuantityDrop = ({ CartIndex, q }) => {
 	const {

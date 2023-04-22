@@ -10,7 +10,6 @@ const Footer = () => {
 				<NavItem>
 					<Link to="/not-found">Contact Us</Link>
 				</NavItem>
-
 				<NavItem>
 					<Link to="/not-found">Site Map</Link>
 				</NavItem>
