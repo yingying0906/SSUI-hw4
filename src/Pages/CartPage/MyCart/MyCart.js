@@ -1,19 +1,19 @@
 import { useContext } from "react";
-import { CartContext } from "../CartContext/CartContext";
-import "./CartPart.css";
+import { cartContext } from "../../../Context/cartContext";
+import "./MyCart.css";
 
 import CartItem from "./component/CartItem";
 
 const CartRender = (prop) => {
-	const { cartState } = useContext(CartContext);
+	const { cartState } = useContext(cartContext);
 	const CartArr = cartState.map((item, index) => {
 		return <CartItem data={item} idx={index} />;
 	});
 	return CartArr;
 };
 
-const CartPart = () => {
-	const { totalQuantity } = useContext(CartContext);
+const MyCart = () => {
+	const { totalQuantity } = useContext(cartContext);
 
 	return (
 		<div className="Cart-Container">
@@ -22,4 +22,4 @@ const CartPart = () => {
 	);
 };
 
-export default CartPart;
+export default MyCart;

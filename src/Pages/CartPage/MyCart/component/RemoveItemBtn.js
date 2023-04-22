@@ -1,10 +1,10 @@
 import { Button } from "reactstrap";
 import "./RemoveItemBtn.css";
 import { useContext } from "react";
-import { CartContext } from "../../CartContext/CartContext";
+import { cartContext } from "../../../../Context/cartContext";
 
 const RemoveItemBtn = (props) => {
-	const { removeFromCart } = useContext(CartContext);
+	const { removeFromCart } = useContext(cartContext);
 	return (
 		<div>
 			<Button

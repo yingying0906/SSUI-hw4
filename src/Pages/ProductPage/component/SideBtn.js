@@ -3,7 +3,7 @@ import { Button } from "reactstrap";
 import "./SideBtn.css";
 
 import { useContext } from "react";
-import { ProductContext } from "../productContext/productContext";
+import { ProductContext } from "../../../Context/productContext";
 
 const SideBtn = () => {
 	const { productState, setProductState } = useContext(ProductContext);

@@ -10,9 +10,6 @@ import {
 } from "reactstrap";
 import { Link } from "react-router-dom";
 import "./BuildCard.css";
-import { ProductContext } from "../../ProductPage/productContext/productContext";
-import { useContext, useEffect } from "react";
-import shirtArr from "../../../shared/shirts";
 
 const BuildCard = (props) => {
 	return (

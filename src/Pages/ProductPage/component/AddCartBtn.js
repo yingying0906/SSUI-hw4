@@ -1,12 +1,12 @@
 import { useContext } from "react";
 import { Button } from "reactstrap";
-import { ProductContext } from "../productContext/productContext";
-import { CartContext } from "../../CartPage/CartContext/CartContext";
+import { ProductContext } from "../../../Context/productContext";
+import { cartContext } from "../../../Context/cartContext";
 import "./AddCartBtn.css";
 
 const AddCartBtn = () => {
 	const { productState } = useContext(ProductContext);
-	const { addToCart } = useContext(CartContext);
+	const { addToCart } = useContext(cartContext);
 
 	return (
 		<div className="AddCartBtn">

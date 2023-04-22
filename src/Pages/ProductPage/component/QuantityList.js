@@ -8,8 +8,7 @@ import {
 import "./QuantityList.css";
 
 import { useContext } from "react";
-import { ProductContext } from "../productContext/productContext";
-
+import { ProductContext } from "../../../Context/productContext";
 const DropMenu = ({ handleQuanItem }) => {
 	const num = [];
 	for (let i = 1; i <= 20; i++) {

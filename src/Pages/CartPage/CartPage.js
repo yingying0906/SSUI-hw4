@@ -1,19 +1,19 @@
 import { useContext } from "react";
-import { CartContext } from "./CartContext/CartContext";
+import { cartContext } from "../../Context/cartContext";
 
 import "./CartPage.css";
-import CartPart from "./CartPart/CartPart";
+import MyCart from "./MyCart/MyCart";
 import OrderSummary from "./OrderSummary/OrderSummary";
 
 const CartPage = () => {
-	const { totalQuantity } = useContext(CartContext);
+	const { totalQuantity } = useContext(cartContext);
 
 	return (
 		<div className="Cart-Page">
 			<h1 className="Cart-title">My Cart ({totalQuantity})</h1>
 
 			<div className="Cart-Content">
-				<CartPart />
+				<MyCart />
 				<OrderSummary />
 			</div>
 		</div>

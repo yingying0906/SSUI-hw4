@@ -1,9 +1,9 @@
 import { useContext } from "react";
-import { CartContext } from "../CartContext/CartContext";
+import { cartContext } from "../../../Context/cartContext";
 import "./OrderSummary.css";
 
 const OrderSummary = () => {
-	const { cartState, totalPrice } = useContext(CartContext);
+	const { cartState, totalPrice } = useContext(cartContext);
 
 	const SubTotal = () => {
 		return (

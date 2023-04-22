@@ -10,7 +10,7 @@ import SideBtn from "./component/SideBtn";
 import ColorBtn from "./component/ColorBtn";
 import AddCartBtn from "./component/AddCartBtn";
 
-import { ProductContext } from "./productContext/productContext";
+import { ProductContext } from "../../Context/productContext";
 
 const ProductPage = () => {
 	const { name, id } = useParams();

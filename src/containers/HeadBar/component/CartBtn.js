@@ -2,10 +2,9 @@ import "./CartBtn.css";
 import { Link } from "react-router-dom";
 import CartLogo from "../../../assets/images/cart.png";
 import { useContext } from "react";
-import { CartContext } from "../../../Pages/CartPage/CartContext/CartContext";
-
+import { cartContext } from "../../../Context/cartContext";
 const CartBtn = () => {
-	const { totalQuantity } = useContext(CartContext);
+	const { totalQuantity } = useContext(cartContext);
 	return (
 		<Link to="/cart" id="cart">
 			<img src={CartLogo} alt="cartlogo" height={"50px"} />
