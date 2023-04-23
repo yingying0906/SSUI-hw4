@@ -11,7 +11,7 @@ import ColorBtn from "./component/ColorBtn";
 import AddCartBtn from "./component/AddCartBtn";
 import notFoundImg from "../../assets/images/not-found.png";
 
-import { ProductContext } from "../../context/productContext";
+import { ProductContext } from "../../context/ProductContext";
 
 const ProductPage = () => {
 	const { name, id } = useParams();

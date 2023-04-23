@@ -6,7 +6,7 @@ import {
 	DropdownItem,
 } from "reactstrap";
 
-import { cartContext } from "../../../../context/cartContext";
+import { CartContext } from "../../../../context/CartContext";
 
 import "./QuantityDrop.css";
 
@@ -18,7 +18,7 @@ const QuantityDrop = ({ CartIndex, q }) => {
 		setTotalQuantity,
 		totalPrice,
 		setTotalPrice,
-	} = useContext(cartContext);
+	} = useContext(CartContext);
 
 	/* change quantity context*/
 	const changeCartQuan = (num) => {

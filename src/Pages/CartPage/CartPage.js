@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { cartContext } from "../../context/cartContext";
+import { CartContext } from "../../context/CartContext";
 
 import MyCart from "./MyCart/MyCart";
 import OrderSummary from "./OrderSummary/OrderSummary";
@@ -8,7 +8,7 @@ import { Button } from "reactstrap";
 import "./CartPage.css";
 
 const CartPage = () => {
-	const { totalQuantity, removeAll } = useContext(cartContext);
+	const { totalQuantity, removeAll } = useContext(CartContext);
 
 	return (
 		<div className="Cart-Page">

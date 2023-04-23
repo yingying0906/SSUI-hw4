@@ -1,12 +1,12 @@
 import { useContext } from "react";
-import { cartContext } from "../../../context/cartContext";
+import { CartContext } from "../../../context/CartContext";
 import { Button } from "reactstrap";
 import { Link } from "react-router-dom";
 
 import "./OrderSummary.css";
 
 const OrderSummary = () => {
-	const { cartState, totalPrice } = useContext(cartContext);
+	const { cartState, totalPrice } = useContext(CartContext);
 
 	const SubTotal = () => {
 		return (

@@ -7,7 +7,7 @@ import {
 } from "reactstrap";
 
 import { useContext } from "react";
-import { ProductContext } from "../../../context/productContext";
+import { ProductContext } from "../../../context/ProductContext";
 
 import "./QuantityList.css";
 

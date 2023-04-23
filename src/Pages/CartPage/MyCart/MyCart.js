@@ -1,12 +1,12 @@
 import { useContext } from "react";
-import { cartContext } from "../../../context/cartContext";
+import { CartContext } from "../../../context/CartContext";
 
 import CartItem from "./component/CartItem";
 
 import "./MyCart.css";
 
 const CartRender = (prop) => {
-	const { cartState } = useContext(cartContext);
+	const { cartState } = useContext(CartContext);
 	const CartArr = cartState.slice(0).map((item, index) => {
 		return <CartItem key={index} data={item} idx={index} />;
 	});
@@ -14,7 +14,7 @@ const CartRender = (prop) => {
 };
 
 const MyCart = () => {
-	const { totalQuantity } = useContext(cartContext);
+	const { totalQuantity } = useContext(CartContext);
 
 	return (
 		<div className="Cart-Container">

@@ -1,7 +1,6 @@
 import { createContext, useState } from "react";
-import { Alert } from "reactstrap";
 
-export const cartContext = createContext();
+export const CartContext = createContext();
 
 export const CartProvider = ({ children }) => {
 	const [cartState, setCartState] = useState([]);
@@ -64,8 +63,8 @@ export const CartProvider = ({ children }) => {
 	};
 
 	return (
-		<cartContext.Provider value={contextValue}>
+		<CartContext.Provider value={contextValue}>
 			{children}
-		</cartContext.Provider>
+		</CartContext.Provider>
 	);
 };

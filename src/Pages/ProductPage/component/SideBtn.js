@@ -2,7 +2,7 @@ import React from "react";
 import { Button } from "reactstrap";
 import { useContext } from "react";
 
-import { ProductContext } from "../../../context/productContext";
+import { ProductContext } from "../../../context/ProductContext";
 
 import "./SideBtn.css";
 

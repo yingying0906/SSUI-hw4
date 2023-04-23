@@ -7,7 +7,7 @@ import {
 } from "reactstrap";
 import "./SizeList.css";
 import { useContext } from "react";
-import { ProductContext } from "../../../context/productContext";
+import { ProductContext } from "../../../context/ProductContext";
 
 const allSize = [
 	"Size",

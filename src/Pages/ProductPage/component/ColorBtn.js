@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { Button } from "reactstrap";
 
-import { ProductContext } from "../../../context/productContext";
+import { ProductContext } from "../../../context/ProductContext";
 
 import "./ColorBtn.css";
 
