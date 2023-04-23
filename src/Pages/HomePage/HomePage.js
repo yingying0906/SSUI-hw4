@@ -1,6 +1,6 @@
-import "./HomePage.css";
-
 import banner from "../../assets/images/banner.png";
+
+import "./HomePage.css";
 
 const Description = () => {
 	return (

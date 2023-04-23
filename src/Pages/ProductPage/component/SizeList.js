@@ -10,6 +10,7 @@ import { useContext } from "react";
 import { ProductContext } from "../../../context/productContext";
 
 const allSize = [
+	"Size",
 	"Women's XS",
 	"Women's S",
 	"Women's M",
@@ -24,21 +25,6 @@ const allSize = [
 	"Men's 2XL",
 ];
 
-const DropMenu = ({ handleSizeItem }) => {
-	return allSize.map((s) => (
-		<DropdownItem
-			key={s}
-			id={s}
-			onClick={(e) => handleSizeItem(e.target.id)}
-			style={{
-				maxWidth: "150px",
-			}}
-		>
-			{s}
-		</DropdownItem>
-	));
-};
-
 const SizeList = () => {
 	const { productState, setProductState } = useContext(ProductContext);
 	const toggleSize = () => {
@@ -49,11 +35,33 @@ const SizeList = () => {
 	};
 
 	const handleSizeItem = (num) => {
-		setProductState({
-			...productState,
-			selSize: num,
-			canAddCart: true,
-		});
+		if (parseInt(num) !== 0) {
+			setProductState({
+				...productState,
+				selSize: allSize[num],
+				canAddCart: true,
+			});
+		} else {
+			setProductState({
+				...productState,
+				canAddCart: false,
+			});
+		}
+	};
+
+	const DropMenu = () => {
+		return allSize.map((s, idx) => (
+			<DropdownItem
+				key={s}
+				id={idx}
+				onClick={(e) => handleSizeItem(e.target.id)}
+				style={{
+					maxWidth: "150px",
+				}}
+			>
+				{s}
+			</DropdownItem>
+		));
 	};
 
 	return (
@@ -66,7 +74,7 @@ const SizeList = () => {
 			>
 				<DropdownToggle caret>{productState.selSize}</DropdownToggle>
 				<DropdownMenu className="QuantityDrop">
-					{DropMenu({ handleSizeItem })}
+					<DropMenu />
 				</DropdownMenu>
 			</Dropdown>
 		</div>

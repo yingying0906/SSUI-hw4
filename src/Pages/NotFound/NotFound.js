@@ -1,5 +1,7 @@
-import "./NotFound.css";
 import dog from "../../assets/images/scotty.png";
+
+import "./NotFound.css";
+
 const NotFound = () => {
 	return (
 		<div className="notFound">

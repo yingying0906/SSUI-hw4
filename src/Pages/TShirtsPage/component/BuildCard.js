@@ -8,14 +8,21 @@ import {
 	Button,
 	CardLink,
 } from "reactstrap";
+
 import { Link } from "react-router-dom";
+
+import notFoundImg from "../../../assets/images/not-found.png";
 import "./BuildCard.css";
 
 const BuildCard = (props) => {
 	return (
 		<Card className="card">
 			<Link to={`/product/${props.name}/${props.id}`}>
-				<CardImg top width="100%" src={props.colors} alt="" />
+				{props.colors === undefined ? (
+					<CardImg top width="100%" src={notFoundImg} alt="" />
+				) : (
+					<CardImg top width="100%" src={props.colors} alt="" />
+				)}
 			</Link>
 
 			<CardBody>

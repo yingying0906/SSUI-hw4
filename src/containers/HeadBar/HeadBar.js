@@ -3,6 +3,7 @@ import { Nav } from "reactstrap";
 
 import Logo from "../../assets/images/logo.png";
 import CartBtn from "./component/CartBtn";
+
 import "./HeadBar.css";
 
 const HeadBar = () => {

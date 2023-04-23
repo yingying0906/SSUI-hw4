@@ -128,6 +128,27 @@ const shirtArr = [
 			back: DefaultMaleBack,
 		},
 	},
+	{
+		name: "Own Shirt",
+		description: "Balalabalala",
+		price: null,
+		colors: {
+			white: {
+				back: DefaultMaleBack,
+			},
+			azul: {
+				front: DefaultMaleFront,
+			},
+			purple: {
+				front: DefaultMaleFront,
+				back: DefaultMaleBack,
+			},
+		},
+		default: {
+			front: DefaultMaleFront,
+			back: DefaultMaleBack,
+		},
+	},
 ];
 
 export default shirtArr;

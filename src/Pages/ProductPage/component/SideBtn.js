@@ -1,9 +1,9 @@
 import React from "react";
 import { Button } from "reactstrap";
-import "./SideBtn.css";
-
 import { useContext } from "react";
+
 import { ProductContext } from "../../../context/productContext";
+import "./SideBtn.css";
 
 const SideBtn = () => {
 	const { productState, setProductState } = useContext(ProductContext);

@@ -1,17 +1,29 @@
 import { useContext } from "react";
 import { cartContext } from "../../context/cartContext";
 
-import "./CartPage.css";
 import MyCart from "./MyCart/MyCart";
 import OrderSummary from "./OrderSummary/OrderSummary";
 
+import { Button } from "reactstrap";
+import "./CartPage.css";
+
 const CartPage = () => {
-	const { totalQuantity } = useContext(cartContext);
+	const { totalQuantity, removeAll } = useContext(cartContext);
 
 	return (
 		<div className="Cart-Page">
-			<h1 className="Cart-title">My Cart ({totalQuantity})</h1>
-
+			<div className="redButton">
+				<h1 className="Cart-title">
+					My Cart ({totalQuantity})
+					<Button
+						className="remove-all"
+						onClick={removeAll}
+						disabled={totalQuantity === 0}
+					>
+						Remove All
+					</Button>
+				</h1>
+			</div>
 			<div className="Cart-Content">
 				<MyCart />
 				<OrderSummary />

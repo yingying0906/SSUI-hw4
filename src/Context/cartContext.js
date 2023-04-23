@@ -1,4 +1,5 @@
 import { createContext, useState } from "react";
+import { Alert } from "reactstrap";
 
 export const cartContext = createContext();
 
@@ -38,11 +39,24 @@ export const CartProvider = ({ children }) => {
 		setCartState(updatedCartItems);
 	};
 
+	const removeAll = () => {
+		var isAgree = window.confirm(
+			`Are you sure you want to remove all ${totalQuantity} items`
+		);
+
+		if (isAgree) {
+			setCartState([]);
+			setTotalQuantity(0);
+			setTotalPrice(0);
+		}
+	};
+
 	const contextValue = {
 		cartState,
 		setCartState,
 		addToCart,
 		removeFromCart,
+		removeAll,
 		totalQuantity,
 		setTotalQuantity,
 		totalPrice,

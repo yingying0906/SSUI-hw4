@@ -5,8 +5,10 @@ import {
 	DropdownMenu,
 	DropdownItem,
 } from "reactstrap";
-import "./QuantityDrop.css";
+
 import { cartContext } from "../../../../context/cartContext";
+
+import "./QuantityDrop.css";
 
 const QuantityDrop = ({ CartIndex, q }) => {
 	const {

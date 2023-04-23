@@ -1,8 +1,9 @@
 import { useContext } from "react";
 import { cartContext } from "../../../context/cartContext";
-import "./MyCart.css";
 
 import CartItem from "./component/CartItem";
+
+import "./MyCart.css";
 
 const CartRender = (prop) => {
 	const { cartState } = useContext(cartContext);

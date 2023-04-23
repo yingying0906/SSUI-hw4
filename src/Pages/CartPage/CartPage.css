@@ -5,7 +5,10 @@
 }
 
 .Cart-title {
-	margin-bottom: 25px;
+	margin-bottom: 15px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
 }
 
 .Cart-Content {
@@ -13,4 +16,8 @@
 	flex-direction: row;
 	justify-content: space-between;
 	align-items: flex-start;
+}
+
+.remove-all {
+	width: 350px;
 }

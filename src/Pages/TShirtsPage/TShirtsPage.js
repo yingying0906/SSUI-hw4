@@ -1,11 +1,22 @@
 import React from "react";
 import BuildCard from "./component/BuildCard";
+
 import shirtArr from "../../shared/shirts";
+
 import "./TShirtsPage.css";
 
 const getColorLink = (obj) => {
-	let colorName = Object.keys(obj.colors)[0];
-	let colorlink = obj.colors[colorName].front;
+	let colorName;
+	let colorlink;
+
+	for (let i = 0; i < Object.keys(obj.colors).length; i++) {
+		colorName = Object.keys(obj.colors)[i];
+		colorlink = obj.colors[colorName].front;
+
+		if (colorlink !== undefined) {
+			break;
+		}
+	}
 	return colorlink;
 };
 const getColorNum = (obj) => {

@@ -1,7 +1,9 @@
 import { useContext } from "react";
 import { Button } from "reactstrap";
+
 import { ProductContext } from "../../../context/productContext";
 import { cartContext } from "../../../context/cartContext";
+
 import "./AddCartBtn.css";
 
 const AddCartBtn = () => {
@@ -11,7 +13,11 @@ const AddCartBtn = () => {
 	return (
 		<div className="redButton">
 			<Button
-				disabled={!productState.canAddCart}
+				disabled={
+					!productState.canAddCart ||
+					productState.price === "" ||
+					productState.price === null
+				}
 				onClick={(e) => {
 					addToCart(productState);
 				}}

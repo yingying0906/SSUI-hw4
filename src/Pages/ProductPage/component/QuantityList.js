@@ -5,29 +5,12 @@ import {
 	DropdownMenu,
 	DropdownItem,
 } from "reactstrap";
-import "./QuantityList.css";
 
 import { useContext } from "react";
 import { ProductContext } from "../../../context/productContext";
-const DropMenu = ({ handleQuanItem }) => {
-	const num = [];
-	for (let i = 1; i <= 20; i++) {
-		num.push(
-			<DropdownItem
-				key={i}
-				id={i}
-				onClick={(e) => handleQuanItem(e.target.id)}
-				style={{
-					maxWidth: "150px",
-				}}
-			>
-				{i}
-			</DropdownItem>
-		);
-	}
 
-	return num;
-};
+import "./QuantityList.css";
+
 const QuantityList = () => {
 	const { productState, setProductState } = useContext(ProductContext);
 
@@ -41,6 +24,26 @@ const QuantityList = () => {
 		setProductState({ ...productState, selQty: parseInt(num) });
 	};
 
+	const DropMenu = () => {
+		const num = [];
+		for (let i = 1; i <= 20; i++) {
+			num.push(
+				<DropdownItem
+					key={i}
+					id={i}
+					onClick={(e) => handleQuanItem(e.target.id)}
+					style={{
+						maxWidth: "150px",
+					}}
+				>
+					{i}
+				</DropdownItem>
+			);
+		}
+
+		return num;
+	};
+
 	return (
 		<div className="customQuanDrop">
 			Quantity:
@@ -51,7 +54,7 @@ const QuantityList = () => {
 			>
 				<DropdownToggle caret>{productState.selQty}</DropdownToggle>
 				<DropdownMenu className="QuantityDrop">
-					{DropMenu({ handleQuanItem })}
+					<DropMenu />
 				</DropdownMenu>
 			</Dropdown>
 		</div>

@@ -1,22 +1,31 @@
 import "./ProductPage.css";
 import { useContext, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import shirtArr from "../../shared/shirts";
 
 /* components */
+import shirtArr from "../../shared/shirts";
 import SizeList from "./component/SizeList";
 import QuantityList from "./component/QuantityList";
 import SideBtn from "./component/SideBtn";
 import ColorBtn from "./component/ColorBtn";
 import AddCartBtn from "./component/AddCartBtn";
+import notFoundImg from "../../assets/images/not-found.png";
 
 import { ProductContext } from "../../context/productContext";
 
 const ProductPage = () => {
 	const { name, id } = useParams();
 	const target = shirtArr[id];
-	const firstClr = Object.keys(target.colors)[0];
-	const firstSide = Object.keys(target.colors[firstClr])[0];
+	var firstClr;
+	var firstSide;
+
+	for (let i = 0; i < Object.keys(target.colors).length; i++) {
+		firstClr = Object.keys(target.colors)[i];
+		firstSide = Object.keys(target.colors[firstClr])[0];
+		if (firstSide !== undefined) {
+			break;
+		}
+	}
 
 	const { productState, setProductState } = useContext(ProductContext);
 
@@ -58,16 +67,29 @@ const ProductPage = () => {
 				<div>
 					<h1>{target.name}</h1>
 					<div className="ProductPage-Container">
-						<img
-							src={
-								target.colors[productState.color][
-									productState.side
-								]
-							}
-							alt=""
-						/>
+						{target.colors[productState.color][
+							productState.side
+						] === undefined ? (
+							<img src={notFoundImg} alt="" />
+						) : (
+							<img
+								src={
+									target.colors[productState.color][
+										productState.side
+									]
+								}
+								alt=""
+							/>
+						)}
 						<div className="ProductPage-rightDiv">
-							<h2>{target.price}</h2>
+							{target.price === "" ||
+							target.price === null ||
+							target.price === undefined ? (
+								<h2>Sold Out</h2>
+							) : (
+								<h2>{target.price}</h2>
+							)}
+
 							<p>{target.description}</p>
 
 							<SideBtn />

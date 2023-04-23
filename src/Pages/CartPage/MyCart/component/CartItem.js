@@ -1,8 +1,9 @@
 import { Link } from "react-router-dom";
 
 import QuantityDrop from "./QuantityDrop";
-import shirtArr from "../../../../shared/shirts";
 import RemoveItemBtn from "./RemoveItemBtn";
+import shirtArr from "../../../../shared/shirts";
+import notFoundImg from "../../../../assets/images/not-found.png";
 
 import "./CartItem.css";
 
@@ -16,7 +17,11 @@ const CartItem = (props) => {
 			<h2>{name}</h2>
 			<div className="Cart-RightDiv">
 				<Link to={`/product/${shirtArr[id].name}/${id}`}>
-					<img src={imgSrc} alt="" />
+					{imgSrc === undefined ? (
+						<img src={notFoundImg} alt="" />
+					) : (
+						<img src={imgSrc} alt="" />
+					)}
 				</Link>
 
 				<div>

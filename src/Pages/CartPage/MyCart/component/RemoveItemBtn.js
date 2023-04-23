@@ -1,7 +1,8 @@
 import { Button } from "reactstrap";
-import "./RemoveItemBtn.css";
 import { useContext } from "react";
 import { cartContext } from "../../../../context/cartContext";
+
+import "./RemoveItemBtn.css";
 
 const RemoveItemBtn = (props) => {
 	const { removeFromCart } = useContext(cartContext);
