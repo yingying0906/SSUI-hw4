@@ -1,12 +1,10 @@
 import {
 	Card,
 	CardImg,
-	CardText,
 	CardBody,
 	CardTitle,
 	CardSubtitle,
 	Button,
-	CardLink,
 } from "reactstrap";
 
 import { Link } from "react-router-dom";
