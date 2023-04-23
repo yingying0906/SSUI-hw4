@@ -41,7 +41,7 @@ export const CartProvider = ({ children }) => {
 
 	const removeAll = () => {
 		var isAgree = window.confirm(
-			`Are you sure you want to remove all ${totalQuantity} items`
+			`Are you sure you want to remove all ${totalQuantity} items?`
 		);
 
 		if (isAgree) {
